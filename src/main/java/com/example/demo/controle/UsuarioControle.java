@@ -1,6 +1,7 @@
 package com.example.demo.controle;
 
 import java.util.List;
+
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +22,10 @@ public class UsuarioControle {
 	private UsuarioServico us;
 	
 	@GetMapping
-	public ResponseEntity<List<Usuario>> findAll(){
+	public ResponseEntity<List<UsuarioDTO>> findAll(){
 		List<Usuario> lista = us.findAll();
 		List<UsuarioDTO> dto = lista.stream().map(
 				x -> new UsuarioDTO(x)).collect(Collectors.toList());
-		return ResponseEntity.ok().body(lista);
+		return ResponseEntity.ok().body(dto);
 	}
 }
