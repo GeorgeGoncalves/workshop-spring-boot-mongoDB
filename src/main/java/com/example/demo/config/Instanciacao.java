@@ -17,6 +17,7 @@ public class Instanciacao implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
+		
 		ur.deleteAll();
 		
 		Usuario maria = new Usuario(
