@@ -36,6 +36,17 @@ public class UsuarioServico {
 		ur.deleteById(id);
 	}
 	
+	public Usuario upDate(Usuario obj) {
+		Usuario novoObj = findById(obj.getId());
+		updateData(novoObj, obj);
+		return ur.save(novoObj);		
+	}
+	
+	private void updateData(Usuario novoObj, Usuario obj) {
+		novoObj.setNome(obj.getNome());
+		novoObj.setEmail(obj.getEmail());
+	}
+
 	public Usuario fromDTO(UsuarioDTO objDTO) {
 		return new Usuario(objDTO.getId(), objDTO.getNome(),
 				objDTO.getEmail());
