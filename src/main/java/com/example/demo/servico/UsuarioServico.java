@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.dto.UsuarioDTO;
 import com.example.demo.entidade.Usuario;
 import com.example.demo.repositorio.UsuarioRepositorio;
 import com.example.demo.servico.exception.ObjetoNaoEncontrado;
@@ -24,5 +25,14 @@ public class UsuarioServico {
 		Optional<Usuario> usuario = ur.findById(id);
 		return usuario.orElseThrow(() -> new ObjetoNaoEncontrado(
 				"Objeto não encontrado"));
+	}
+	
+	public Usuario insert(Usuario obj) {
+		return ur.insert(obj);
+	}
+	
+	public Usuario fromDTO(UsuarioDTO objDTO) {
+		return new Usuario(objDTO.getId(), objDTO.getNome(),
+				objDTO.getEmail());
 	}
 }
