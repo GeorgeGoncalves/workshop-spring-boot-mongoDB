@@ -31,6 +31,11 @@ public class UsuarioServico {
 		return ur.insert(obj);
 	}
 	
+	public void delete(String id) {
+		ur.findById(id);
+		ur.deleteById(id);
+	}
+	
 	public Usuario fromDTO(UsuarioDTO objDTO) {
 		return new Usuario(objDTO.getId(), objDTO.getNome(),
 				objDTO.getEmail());
