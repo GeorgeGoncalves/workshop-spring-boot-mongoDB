@@ -2,7 +2,7 @@
 
 Projeto realizado por mim, com intensão de novas aprendizagens em BACKEND, através do curso que fiz na [DevSuperior](devsuperior.com.br).
 
-![workshop](https://github.com/user-attachments/assets/0cf4cc41-4552-421b-8407-ef6099062161)
+<img width=70% bottom=50px src="https://github.com/user-attachments/assets/4677f58b-f50e-4311-bc8d-d755b13a990f"/>
 
 ## tecnologias utilizadas
 
