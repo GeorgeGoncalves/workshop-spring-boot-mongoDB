@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
+import com.example.demo.dto.AutorDTO;
 import com.example.demo.entidade.Post;
 import com.example.demo.entidade.Usuario;
 import com.example.demo.repositorio.PostRepositorio;
@@ -39,10 +40,10 @@ public class Instanciacao implements CommandLineRunner {
 		
 		Post post1 = new Post(null, sdf.parse("21/03/2018"), 
 				"Partiu viagem", "Vou viajar para São Paulo. Abraços!",
-				maria);
+				new AutorDTO(maria));
 		
 		Post post2 = new Post(null, sdf.parse("23/03/2018"), 
-				"Bom dia", "acordei feliz hoje", maria);
+				"Bom dia", "acordei feliz hoje", new AutorDTO(maria));
 		
 		pr.saveAll(Arrays.asList(post1, post2));
 	}
