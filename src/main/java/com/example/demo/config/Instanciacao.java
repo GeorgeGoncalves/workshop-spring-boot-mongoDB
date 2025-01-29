@@ -46,6 +46,9 @@ public class Instanciacao implements CommandLineRunner {
 				"Bom dia", "acordei feliz hoje", new AutorDTO(maria));
 		
 		pr.saveAll(Arrays.asList(post1, post2));
+		
+		maria.getPosts().addAll(Arrays.asList(post1, post2));
+		ur.save(maria);
 	}
 
 }
