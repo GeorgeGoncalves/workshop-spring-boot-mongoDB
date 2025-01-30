@@ -26,4 +26,7 @@ public class PostServico {
 		return pr.findByTituloContainingIgnoreCase(texto);
 	}
 	
+	public List<Post> findByTexto1(String texto){
+		return pr.procuraTitulo(texto);
+	}	
 }
