@@ -1,5 +1,6 @@
 package com.example.demo.servico;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,4 +21,9 @@ public class PostServico {
 		return usuario.orElseThrow(() -> new ObjetoNaoEncontrado(
 				"Objeto não encontrado"));
 	}
+	
+	public List<Post> findByTexto(String texto){
+		return pr.findByTituloContainingIgnoreCase(texto);
+	}
+	
 }
