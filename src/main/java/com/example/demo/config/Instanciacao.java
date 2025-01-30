@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
 import com.example.demo.dto.AutorDTO;
+import com.example.demo.dto.ComentariosDTO;
 import com.example.demo.entidade.Post;
 import com.example.demo.entidade.Usuario;
 import com.example.demo.repositorio.PostRepositorio;
@@ -44,6 +45,18 @@ public class Instanciacao implements CommandLineRunner {
 		
 		Post post2 = new Post(null, sdf.parse("23/03/2018"), 
 				"Bom dia", "acordei feliz hoje", new AutorDTO(maria));
+		
+		ComentariosDTO c1 = new ComentariosDTO("Boa viagem mano!",
+				sdf.parse("21/03/2018"), new AutorDTO(alex));
+		
+		ComentariosDTO c2 = new ComentariosDTO( "Aproveite!", 
+				sdf.parse("28/03/2018"), new AutorDTO(bob));
+		
+		ComentariosDTO c3 = new ComentariosDTO( "Tenha um ótimo dia!",
+				sdf.parse("23/03/2018"), new AutorDTO(alex));
+		
+		post1.getComentarios().addAll(Arrays.asList(c1, c2));
+		post2.getComentarios().addAll(Arrays.asList(c3));
 		
 		pr.saveAll(Arrays.asList(post1, post2));
 		
