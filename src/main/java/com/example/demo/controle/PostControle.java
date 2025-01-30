@@ -1,5 +1,6 @@
 package com.example.demo.controle;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +20,12 @@ import com.example.demo.servico.PostServico;
 public class PostControle {
 
 	@Autowired
-	private PostServico ps;
+	private PostServico pc;
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Post> findById(
 			@PathVariable String id){
-		Post obj = ps.findById(id);
+		Post obj = pc.findById(id);
 		return ResponseEntity.ok().body(obj);
 	}
 	
@@ -32,7 +33,19 @@ public class PostControle {
 	public ResponseEntity<List<Post>> findByTitulo(
 			@RequestParam String texto){
 		texto = URL.parametroDecodificacao(texto);
-		List<Post> lista = ps.findByTexto(texto);
+		List<Post> lista = pc.findByTexto(texto);
+		return ResponseEntity.ok().body(lista);
+	}	
+	
+	@GetMapping(value = "/pesquisacompleta")
+	public ResponseEntity<List<Post>> pesquisaCompleta(
+ 			@RequestParam(defaultValue = "") String texto,
+ 			@RequestParam(defaultValue = "") String minData,
+ 			@RequestParam(defaultValue = "") String maxData) {
+		texto = URL.parametroDecodificacao(texto);
+		Date min = URL.converterData(minData, new Date(0L));
+		Date max = URL.converterData(maxData, new Date());;
+		List<Post> lista = pc.pesquisaCompleta(texto,min, max);
 		return ResponseEntity.ok().body(lista);
 	}	
 }

@@ -1,5 +1,6 @@
 package com.example.demo.servico;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,4 +30,9 @@ public class PostServico {
 	public List<Post> findByTexto1(String texto){
 		return pr.procuraTitulo(texto);
 	}	
+	
+	public List<Post> pesquisaCompleta(String texto, Date minData, Date maxData){
+		maxData = new Date(maxData.getTime() + 24 * 60 * 60 * 1000);
+		return pr.pesquisaCompleta(texto, minData, maxData);
+	}
 }
