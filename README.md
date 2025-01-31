@@ -7,10 +7,6 @@ Este projeto simula um post de um certo usuario com comentarios de outros usuari
 
 <img width=70% bottom=50px src="https://github.com/user-attachments/assets/3dfdd042-a57b-40e1-a177-3035a6441a9d"/>
 
-### Imagem do MongoDB com os Usuarios cadastrados
-
-<img width=100% bottom=50px src="https://github.com/user-attachments/assets/3b548715-ac9c-4514-a96b-af30e8ef6963"/>
-
 ### tecnologias utilizadas
 
 - Spring Tools Suite(STS)
@@ -40,10 +36,6 @@ Funcoes Endpoints:
 - DELETE /usuarios/{id} - deletando dado.
 
 - PUT /usuários/{id} - Alterando dado.
-
-### Imagem de um teste realizado no Postman
-
-<img width=80% bottom=50px src="https://github.com/user-attachments/assets/9118c355-c61d-4133-8525-d4d1c05b4de9"/>
 
 ### Foi utilizado a arquitetura de 3 camadas:
 - controller
