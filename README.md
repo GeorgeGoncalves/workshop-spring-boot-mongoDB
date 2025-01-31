@@ -52,16 +52,16 @@ Funcoes Endpoints:
 
 ### Como reproduzir o projeto
 
-# Pré requesitos
+### Pré requesitos
 java 17
 
-# clonar o repositorio
+### clonar o repositorio
 https://github.com/GeorgeGoncalves/workshop-spring-boot-mongoDB.git
 
-# entrar na pasta 
+### entrar na pasta 
 com.example.demo
 
-# executar o projeto
+### executar o projeto
 executar o arquivo WorkshopMongoDbApplication.java
 spring boot: run
 
