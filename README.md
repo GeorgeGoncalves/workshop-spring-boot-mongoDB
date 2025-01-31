@@ -43,7 +43,7 @@ Funcoes Endpoints:
 - PUT /usuários/{id} - Alterando dado.
 ```
 
-### Imagem de um teste realizado no feito no Postman
+### Imagem de um teste realizado no Postman
 
 <img width=80% bottom=50px src="https://github.com/user-attachments/assets/9118c355-c61d-4133-8525-d4d1c05b4de9"/>
 
