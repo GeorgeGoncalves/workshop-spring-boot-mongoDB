@@ -21,7 +21,6 @@ Este projeto simula um post de um certo usuario com comentarios de outros usuari
 - Postman
   - Json
     
- ```
 Funcoes Endpoints:
 
 - GET /usuarios - Retorna toda a lista de dados.
@@ -41,7 +40,6 @@ Funcoes Endpoints:
 - DELETE /usuarios/{id} - deletando dado.
 
 - PUT /usuários/{id} - Alterando dado.
-```
 
 ### Imagem de um teste realizado no Postman
 
@@ -53,7 +51,7 @@ Funcoes Endpoints:
 - repository
 
 ### Como reproduzir o projeto
-```
+
 # Pré requesitos
 java 17
 
@@ -66,7 +64,6 @@ com.example.demo
 # executar o projeto
 executar o arquivo WorkshopMongoDbApplication.java
 spring boot: run
-```
 
 ### Autor
 
